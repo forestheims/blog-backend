@@ -22,7 +22,6 @@ describe('user routes test', () => {
         tags: ['1', '2'],
       });
     const res = await request(app).get('/api/v1/links/');
-    console.log('res', res);
     expect(res.body).toEqual([
       {
         id: '1',
