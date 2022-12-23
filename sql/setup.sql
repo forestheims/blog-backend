@@ -5,7 +5,7 @@ CREATE TABLE links (
   link_url VARCHAR UNIQUE NOT NULL,
   title VARCHAR,
   tags VARCHAR ARRAY,
-  order_index DATE DEFAULT CURRENT_DATE;
+  order_index DATE DEFAULT CURRENT_DATE
 );
 
 INSERT INTO links
