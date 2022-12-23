@@ -14,13 +14,6 @@ describe('user routes test', () => {
   });
 
   it('test test', async () => {
-    await request(app)
-      .post('/api/v1/links/')
-      .send({
-        link_url: 'test chicken url',
-        title: 'TeSt TiTlE',
-        tags: ['1', '2'],
-      });
     const res = await request(app).get('/api/v1/links/');
     expect(res.body).toEqual([
       {
@@ -106,7 +99,7 @@ describe('user routes test', () => {
         title: 'TeSt TiTlE',
         link_url: 'test chicken url',
         tags: expect.any(Array),
-        order_index: 1030106181,
+        order_index: expect.any(Number),
       },
     ]);
   });
