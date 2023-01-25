@@ -24,3 +24,40 @@ VALUES
   ('https://ryanstutorials.net/problem-solving-skills/','Problem Solving Skills and Techniques', ARRAY['problem solving', 'tutorials']);
 
 
+-- These PostgreSQL commands were ran from beekeeper
+--
+-- DROP TABLE IF EXISTS blogs CASCADE;
+--
+-- DROP TABLE IF EXISTS categories CASCADE;
+--
+-- DROP TABLE IF EXISTS blog_categories CASCADE;
+--
+-- CREATE TABLE categories (
+--   id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+--   slug VARCHAR UNIQUE NOT NULL
+-- );
+--
+-- SET timezone = 'America/Los_Angeles';
+--
+-- CREATE TABLE blogs (
+--   id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+--   title VARCHAR UNIQUE NOT NULL,
+--   meta_title VARCHAR NOT NULL,
+--   tags VARCHAR ARRAY,
+--   category INT NOT NULL,
+--   content TEXT NOT NULL,
+--   publish_date TIMESTAMPTZ,
+--   FOREIGN KEY (category)
+--   	REFERENCES categories (id)
+-- );
+--
+-- INSERT INTO categories
+-- 	(slug)
+-- VALUES
+--   ('Earth Stuff'),
+-- 	('Human Stuff'),
+-- 	('Computer Stuff'),
+-- 	('Cyborg Stuff'),
+--   ('Universal Stuff');
+-- 
+--
